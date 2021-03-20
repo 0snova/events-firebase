@@ -51,7 +51,7 @@ export class FirestoreConnector<
       onNewDoc: (data) => {
         this.accept(data);
       },
-      removeAfterProcessed: true,
+      removeAfterProcessed: this.options.deleteResponse,
     });
 
     return this.responseListener;
