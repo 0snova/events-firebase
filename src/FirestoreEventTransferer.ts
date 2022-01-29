@@ -29,8 +29,8 @@ export class FirestoreEventTransferer<Event extends AnyEvent>
 
   transfer = async <E extends Event>(event: E): Promise<Event & IdentifiableEvent> => {
     const col = collection(this.firestore, this.getRef(event));
-    const docRef = await addDoc(col, event);
     const finalEvent = this.enhanceEvent(event);
+    const docRef = await addDoc(col, finalEvent);
 
     finalEvent.id = docRef.id;
 

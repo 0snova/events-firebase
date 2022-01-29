@@ -1,6 +1,6 @@
 {
   "name": "@osnova/events-firebase",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "@osnova/events bindings for Firebase",
   "author": "Alexander Snov",
   "license": "MIT",
